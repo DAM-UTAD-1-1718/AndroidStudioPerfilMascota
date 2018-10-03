@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="379dp"
+        android:layout_height="160dp"
+        android:layout_marginStart="8dp"
+
+        android:layout_marginEnd="8dp"
+        android:scaleX="2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/backgrounds/scenic[1]" />
+
+    <ImageView
+        android:id="@+id/imUser"
+        android:layout_width="127dp"
+        android:layout_height="103dp"
+
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="138dp"
+        android:scaleX="0.5"
+        android:scaleY="0.5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@tools:sample/avatars[3]" />
+
+
+    <ScrollView
+
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="334dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imUser"
+        app:layout_constraintVertical_bias="0.0">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtDescripcion"
+                android:layout_width="297dp"
+                android:layout_height="115dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="36dp"
+                android:text=""
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.507"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/scrollView" />
+
+            <!--layout_gravity -> sirve para mover un objeto por el LinealLayout-->
+
+            <!--<Switch
+                <!-android:id="@+id/btnVisible"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="match_parent"-->
+
+
+            <!--android:layout_gravity="right"-->
+            <!--android:layout_marginEnd="20dp"-->
+
+            <!--android:text="@string/switchVisible"-->
+            <!--tools:ignore="RtlHardcoded" />-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginEnd="10dp">
+
+                <Button
+                    android:id="@+id/btnVisible"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+
+
+                    android:layout_marginEnd="20dp"
+
+                    android:text="@string/btnVisible"
+                    tools:ignore="RtlHardcoded" />
+
+
+                <Button
+                    android:id="@+id/btnInvisible"
+                    android:layout_width="100dp"
+                    android:layout_height="match_parent"
+
+                    android:text="@string/btnInvisible"
+                    tools:ignore="RtlHardcoded" />
+            </LinearLayout>
+
+
+            <android.support.design.widget.TextInputLayout
+
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="40dp">
+
+                <EditText
+                    android:id="@+id/txtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/txtMail"
+                    android:inputType="textEmailAddress"
+                    tools:ignore="Autofill" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+
+                android:orientation="horizontal"
+
+                >
+
+                <android.support.design.widget.TextInputLayout
+
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="40dp">
+
+                    <EditText
+                        android:id="@+id/txtApellido1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/txtMail"
+                        android:inputType="textEmailAddress"
+                        tools:ignore="Autofill" />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginStart="65dp"
+                    android:layout_marginTop="40dp">
+
+                    <EditText
+                        android:id="@+id/txtApellido2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/txtMail"
+                        android:inputType="textEmailAddress"
+                        tools:ignore="Autofill" />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <android.support.design.widget.TextInputLayout
+
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="40dp">
+
+                <EditText
+                    android:id="@+id/txtPostalCode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/txtMail"
+                    android:inputType="textEmailAddress"
+                    tools:ignore="Autofill" />
+
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="40dp">
+
+                <EditText
+                    android:id="@+id/txtCity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/txtMail"
+                    android:inputType="textEmailAddress"
+
+                    tools:ignore="Autofill" />
+
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</android.support.constraint.ConstraintLayout>

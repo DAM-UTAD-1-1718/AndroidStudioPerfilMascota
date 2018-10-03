@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Perfil</string>
+    <string name="switchVisible">visible</string>
+    <string name="txtMail">v.a.lantaron@gmail.com</string>
+    <string name="btnVisible">visible</string>
+    <string name="btnInvisible">invisible</string>
+
+</resources>
