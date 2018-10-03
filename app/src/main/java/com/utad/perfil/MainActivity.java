@@ -10,41 +10,35 @@ import android.widget.Switch;
 
 public class MainActivity extends AppCompatActivity {
 
-    private View mtext;
-    private boolean visible;
+    private View textDescription;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        Switch visibleButton = findViewById(R.id.btnVisible);
-//        visibleButton = findViewById(R.id.btnVisible);
-        Button goneButton = findViewById(R.id.btnInvisible);
-
-
-//        visibleButton.OnClickListener(new View.OnClickListener(){
-//            public void onClick(View v) {
-//                mtext.setVisibility(View.GONE);
-//
-//            }
-//        });
+        textDescription = findViewById(R.id.txtDescripcion);
+        final Button visibleButton = findViewById(R.id.btnVisible);
+        final Button goneButton = findViewById(R.id.btnInvisible);
 
         goneButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                mtext.setVisibility(View.GONE);
+                textDescription.setVisibility(View.GONE);
+
 
             }
-        });
 
+        });
         visibleButton.setOnClickListener(new View.OnClickListener() {
 
             public void onClick(View v) {
-                mtext.setVisibility(View.VISIBLE);
+                textDescription.setVisibility(View.VISIBLE);
+
 
             }
+
         });
+
     }
 }
-
